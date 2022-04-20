@@ -7,13 +7,14 @@ body{
 
 div.container{
     width: 80%;
+    margin: 0 auto;
 }
 div.main-timer{
     width: 50%;
     border: 2px solid white;
     border-radius: 6px;
     height: 300px;
-    margin: 250px auto;
+    margin: 200px auto;
     text-align: center;
 }
 span.timer, span.stop-watch{
@@ -32,4 +33,13 @@ span.timer, span.stop-watch{
     margin-top: 50px;
     font-size: 70px;
     font-weight: 800;
+}
+.start{
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 90px;
+    cursor: pointer;
 }
