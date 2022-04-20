@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+div.container{
+    width: 80%;
+}
+div.timer{
+    width: 50%;
+    border: 1px solid white;
+    height: 300px;
+    margin: 200px auto;
+}
