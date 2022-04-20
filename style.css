@@ -8,9 +8,22 @@ body{
 div.container{
     width: 80%;
 }
-div.timer{
+div.main-timer{
     width: 50%;
-    border: 1px solid white;
+    border: 2px solid white;
+    border-radius: 6px;
     height: 300px;
-    margin: 200px auto;
+    margin: 250px auto;
+    text-align: center;
+}
+span.timer, span.stop-watch{
+    margin-top: 20px;
+    margin-left: 5px;
+    display: inline-block;
+    padding: 8px;
+    background-color: rgb(141, 141, 135);
+    width: 80px;
+    cursor: pointer;
+    border-radius: 4px;
+    
 }
