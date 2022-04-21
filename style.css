@@ -56,6 +56,7 @@ span.timer, span.stop-watch{
     border-radius: 8px;
     width: 90px;
     cursor: pointer;
+    margin-left: -20px;
 }
 .reset{
     margin-left: 10px;
