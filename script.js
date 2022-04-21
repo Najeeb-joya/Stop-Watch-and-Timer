@@ -6,24 +6,23 @@ let dis_second = document.querySelector('.second');
 let dis_miliseconds = document.querySelector('.miliseconds');
 let btn_start = document.querySelector('.start');
 let btn_rest = document.querySelector('.reset');
-let hour=0;
-let minute=0; 
-let second =0;
-let mili_second=0;
+let hour=0, minute =0, second = 0, mili_second =0;
 var intr; 
 
 function stopwatch(){
     intr = setInterval(() => {
-        mili_second++;
-        if(mili_second == 1000){
+        mili_second +=1;
+        if(mili_second == 99){
             mili_second =0;
             second++;
         }
         if(second==60){
+            mili_second =0;
             second=0; 
             minute++;
         }
         if(minute==60 && second ==59){
+            mili_second=0;
             second=0; 
             minute=0; 
             hour++; 
@@ -31,8 +30,8 @@ function stopwatch(){
         dis_hour.textContent = hour.pad(2); 
         dis_minute.textContent = minute.pad(2); 
         dis_second.textContent = second.pad(2);
-        dis_miliseconds.textContent = mili_second.pad(3);
-    }, 1);
+        dis_miliseconds.textContent = mili_second.pad(2);
+    },10);
 }
 
 btn_start.addEventListener('click', e =>{
