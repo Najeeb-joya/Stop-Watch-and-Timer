@@ -24,7 +24,7 @@ span.timer, span.stop-watch{
     font-weight: 600;
     display: inline-block;
     padding: 8px;
-    background-color: rgb(141, 141, 135);
+    background-color: rgb(219, 135, 10);
     width: 90px;
     cursor: pointer;
     border-radius: 4px; 
@@ -34,6 +34,10 @@ span.timer, span.stop-watch{
     font-size: 70px;
     font-weight: 800;
 }
+.hour, .minute, .second, .mili-second{
+    margin-left: -15px;
+}
+
 .start{
     padding: 10px;
     margin-top: 10px;
@@ -42,4 +46,8 @@ span.timer, span.stop-watch{
     border-radius: 8px;
     width: 90px;
     cursor: pointer;
+}
+.reset{
+    margin-left: 10px;
+    display: none;
 }
