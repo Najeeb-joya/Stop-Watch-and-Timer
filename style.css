@@ -34,8 +34,14 @@ span.timer, span.stop-watch{
     font-size: 70px;
     font-weight: 800;
 }
-.hour, .minute, .second, .mili-second{
+
+.hour, .minute, .second{
     margin-left: -15px;
+}
+.miliseconds{
+    margin-left: -10px;
+    font-size: 25px;
+    font-weight: 200;
 }
 
 .start{
