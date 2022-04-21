@@ -1,6 +1,11 @@
-const timer_lable = document.querySelector('.timer');
-const stopwath_lable = document.querySelector('.stop-watch');
-const hour = document.querySelector('.hour');
-const minute = document.querySelector('.minute');
-const second = document.querySelector('.second');
+let timer_lable = document.querySelector('.timer');
+let stopwath_lable = document.querySelector('.stop-watch');
+let dis_hour = document.querySelector('.hour');
+let dis_minute = document.querySelector('.minute');
+let dis_second = document.querySelector('.second');
 const btn_start = document.querySelector('.start');
+let hour=0;
+let minute=0; 
+let second =0;
+let intr; 
+
