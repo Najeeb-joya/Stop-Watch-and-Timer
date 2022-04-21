@@ -3,7 +3,8 @@ let stopwath_lable = document.querySelector('.stop-watch');
 let dis_hour = document.querySelector('.hour');
 let dis_minute = document.querySelector('.minute');
 let dis_second = document.querySelector('.second');
-const btn_start = document.querySelector('.start');
+let btn_start = document.querySelector('.start');
+let btn_rest = document.querySelector('.reset');
 let hour=0;
 let minute=0; 
 let second =0;
@@ -33,6 +34,16 @@ btn_start.addEventListener('click', e =>{
         for(var n = this.toString(); n.length < digits; n = 0+n);
         return n;
     }
+
+    btn_rest.style.display="inline-block";
+    btn_rest.addEventListener('click', () => {
+        clearInterval(intr);
+        dis_hour.textContent= "00"; 
+        dis_minute.textContent = "00";
+        dis_second.textContent = "00";
+        btn_start.textContent = "Start";
+        btn_rest.style.display="none";
+    });
     if(btn_start.textContent === "Pause"){
             clearInterval(intr);
             btn_start.textContent = "Resume"
