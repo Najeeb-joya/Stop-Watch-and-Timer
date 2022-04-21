@@ -9,3 +9,25 @@ let minute=0;
 let second =0;
 let intr; 
 
+btn_start.addEventListener('click', e =>{
+    Number.prototype.pad = function(digits){
+        for(var n = this.toString(); n.length < digits; n = 0+n);
+        return n;
+    }
+    intr = setInterval(() => {
+        second++;
+        if(second==60){
+            second=0; 
+            minute++;
+        }
+        if(minute==60 && second ==59){
+            second=0; 
+            minute=0; 
+            hour++; 
+        }
+        dis_hour.textContent = hour.pad(2); 
+        dis_minute.textContent = minute.pad(2); 
+        dis_second.textContent = second.pad(2);
+    }, 10);
+});
+
