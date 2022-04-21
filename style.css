@@ -29,8 +29,12 @@ span.timer, span.stop-watch{
     cursor: pointer;
     border-radius: 4px; 
 }
+.stop-watch:hover, .timer:hover{
+    background-color: black;
+
+}
 .timer-display-sec{
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 70px;
     font-weight: 800;
 }
