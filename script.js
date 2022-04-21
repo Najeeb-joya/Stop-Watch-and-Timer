@@ -50,7 +50,7 @@ btn_start.addEventListener('click', e =>{
         dis_hour.textContent= "00"; 
         dis_minute.textContent = "00";
         dis_second.textContent = "00";
-        dis_miliseconds.textContent = "000";
+        dis_miliseconds.textContent = "00";
         btn_start.textContent = "Start";
         btn_rest.style.display="none";
     });
