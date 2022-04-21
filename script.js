@@ -25,8 +25,7 @@ function stopwatch(){
         dis_hour.textContent = hour.pad(2); 
         dis_minute.textContent = minute.pad(2); 
         dis_second.textContent = second.pad(2);
-    }, 10);
-
+    }, 1000);
 }
 
 btn_start.addEventListener('click', e =>{
@@ -38,6 +37,9 @@ btn_start.addEventListener('click', e =>{
     btn_rest.style.display="inline-block";
     btn_rest.addEventListener('click', () => {
         clearInterval(intr);
+        hour =0;
+        minute =0;
+        second=0;
         dis_hour.textContent= "00"; 
         dis_minute.textContent = "00";
         dis_second.textContent = "00";
@@ -53,7 +55,5 @@ btn_start.addEventListener('click', e =>{
         btn_start.textContent = "Pause";
     }
     
-       
-   
 });
 
