@@ -3,16 +3,22 @@ let stopwath_lable = document.querySelector('.stop-watch');
 let dis_hour = document.querySelector('.hour');
 let dis_minute = document.querySelector('.minute');
 let dis_second = document.querySelector('.second');
+let dis_miliseconds = document.querySelector('.miliseconds');
 let btn_start = document.querySelector('.start');
 let btn_rest = document.querySelector('.reset');
 let hour=0;
 let minute=0; 
 let second =0;
+let mili_second=0;
 var intr; 
 
 function stopwatch(){
     intr = setInterval(() => {
-        second++;
+        mili_second++;
+        if(mili_second == 1000){
+            mili_second =0;
+            second++;
+        }
         if(second==60){
             second=0; 
             minute++;
@@ -25,7 +31,8 @@ function stopwatch(){
         dis_hour.textContent = hour.pad(2); 
         dis_minute.textContent = minute.pad(2); 
         dis_second.textContent = second.pad(2);
-    }, 1000);
+        dis_miliseconds.textContent = mili_second.pad(3);
+    }, 1);
 }
 
 btn_start.addEventListener('click', e =>{
@@ -40,9 +47,11 @@ btn_start.addEventListener('click', e =>{
         hour =0;
         minute =0;
         second=0;
+        mili_second =0;
         dis_hour.textContent= "00"; 
         dis_minute.textContent = "00";
         dis_second.textContent = "00";
+        dis_miliseconds.textContent = "000";
         btn_start.textContent = "Start";
         btn_rest.style.display="none";
     });
