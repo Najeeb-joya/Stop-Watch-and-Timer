@@ -7,13 +7,9 @@ const btn_start = document.querySelector('.start');
 let hour=0;
 let minute=0; 
 let second =0;
-let intr; 
+var intr; 
 
-btn_start.addEventListener('click', e =>{
-    Number.prototype.pad = function(digits){
-        for(var n = this.toString(); n.length < digits; n = 0+n);
-        return n;
-    }
+function stopwatch(){
     intr = setInterval(() => {
         second++;
         if(second==60){
@@ -29,5 +25,24 @@ btn_start.addEventListener('click', e =>{
         dis_minute.textContent = minute.pad(2); 
         dis_second.textContent = second.pad(2);
     }, 10);
+
+}
+
+btn_start.addEventListener('click', e =>{
+    Number.prototype.pad = function(digits){
+        for(var n = this.toString(); n.length < digits; n = 0+n);
+        return n;
+    }
+    if(btn_start.textContent === "Pause"){
+            clearInterval(intr);
+            btn_start.textContent = "Resume"
+    
+    }else{
+        stopwatch();
+        btn_start.textContent = "Pause";
+    }
+    
+       
+   
 });
 
