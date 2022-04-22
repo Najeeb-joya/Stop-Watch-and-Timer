@@ -34,6 +34,12 @@ function stopwatch(){
     },10);
 }
 
+
+timer_lable.addEventListener('click', e =>{
+
+    console.log("Timer Lable Clicked");
+},{once:true});
+
 btn_start.addEventListener('click', e =>{
     Number.prototype.pad = function(digits){
         for(var n = this.toString(); n.length < digits; n = 0+n);
