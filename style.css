@@ -65,7 +65,7 @@ span.timer, span.stop-watch{
     display: none;
 }
 
-.countdown_timer{
+.countdown-timer{
     width: 60%;
     background-color: white;
     margin: 10px auto;
