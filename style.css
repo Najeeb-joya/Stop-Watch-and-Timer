@@ -15,6 +15,7 @@ div.main-timer{
     border-radius: 6px;
     height: 300px;
     margin: 200px auto;
+    margin-bottom: 0;
     text-align: center;
 }
 span.timer, span.stop-watch{
@@ -64,10 +65,29 @@ span.timer, span.stop-watch{
 }
 
 .countdown_timer{
-    width: 60%;
+    width: 90%;
     background-color: white;
-    margin: 0 auto;
+    margin: 10px auto;
     height: 200px;
     text-align: center;
     color: black;
+    border-radius: 6px;
+}
+.cdtimer{
+    width: 90%;
+    margin: 80px auto;
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 600;
+}
+.cdtimer section{
+    display: inline-block;
+    margin-left: 15px;
+    
+}
+.cdtimer select {
+    font-size: 23px;
+    margin-left: 5px;
+    width: 80px;
+    border-radius: 6px;
 }
