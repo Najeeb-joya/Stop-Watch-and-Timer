@@ -6,6 +6,7 @@ let dis_second = document.querySelector('.second');
 let dis_miliseconds = document.querySelector('.miliseconds');
 let btn_start = document.querySelector('.start');
 let btn_rest = document.querySelector('.reset');
+let countdown_time = document.querySelector('.countdown-timer');
 let hour=0, minute =0, second = 0, mili_second =0;
 var intr; 
 
@@ -38,6 +39,7 @@ function stopwatch(){
 timer_lable.addEventListener('click', e =>{
 
     console.log("Timer Lable Clicked");
+    countdown_time.style.display="block";
 },{once:true});
 
 btn_start.addEventListener('click', e =>{
