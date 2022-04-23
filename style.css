@@ -3,6 +3,7 @@ body{
     padding: 0;
     background-color: rgb(32, 32, 32);
     color: white;
+    position: relative;
 }
 
 div.container{
@@ -65,17 +66,22 @@ span.timer, span.stop-watch{
 }
 
 .countdown_timer{
-    width: 90%;
+    width: 60%;
     background-color: white;
     margin: 10px auto;
-    height: 200px;
+    height: 300px;
     text-align: center;
     color: black;
     border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
 }
 .cdtimer{
     width: 90%;
-    margin: 80px auto;
+    margin: 100px auto;
     display: inline-block;
     font-size: 23px;
     font-weight: 600;
