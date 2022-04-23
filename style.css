@@ -79,6 +79,11 @@ span.timer, span.stop-watch{
     right: 0;
     display: none;
 }
+.close{
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
 .cdtimer{
     width: 90%;
     margin: 100px auto;
