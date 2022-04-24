@@ -40,7 +40,12 @@ timer_lable.addEventListener('click', e =>{
 
     console.log("Timer Lable Clicked");
     countdown_time.style.display="block";
-},{once:true});
+
+    document.querySelector('.close-img').addEventListener('click', e => {
+        countdown_time.style.display="none";
+    });
+
+});
 
 btn_start.addEventListener('click', e =>{
     Number.prototype.pad = function(digits){
