@@ -2,9 +2,14 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgb(32, 32, 32);
+    background-color: #207398;
     color: white;
     position: relative;
    
+}
+button{
+    background-color: rgb(219, 135, 10);
+    color: white;
 }
 div.container{
     width: 80%;
@@ -13,8 +18,8 @@ div.container{
 }
 div.main-timer{
     width: 50%;
-    border: 2px solid white;
-    border-radius: 6px;
+    border: 5px solid white;
+    border-radius: 10px;
     height: 300px;
     margin: 200px auto;
     margin-bottom: 0;
