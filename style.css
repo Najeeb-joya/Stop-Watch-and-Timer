@@ -4,11 +4,12 @@ body{
     background-color: rgb(32, 32, 32);
     color: white;
     position: relative;
+   
 }
-
 div.container{
     width: 80%;
     margin: 0 auto;
+    
 }
 div.main-timer{
     width: 50%;
@@ -83,6 +84,10 @@ span.timer, span.stop-watch{
     text-align: right;
     margin-right: 10px;
     margin-top: 10px;
+    
+}
+.close img{
+    cursor: pointer;
 }
 .cdtimer{
     width: 90%;
