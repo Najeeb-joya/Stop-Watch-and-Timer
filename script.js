@@ -10,6 +10,50 @@ let countdown_time = document.querySelector('.countdown-timer');
 let hour=0, minute =0, second = 0, mili_second =0;
 var intr; 
 
+var dropDown = () => {
+    console.log("Drop Dwon Called!");
+    let hour_dropdown = document.querySelector('.hour-dropdown');
+    let minute_dropdown = document.querySelector('.minute-dropdown');
+    let second_dropdown = document.querySelector('.second-dropdown');
+        for (let i = 0; i < 100; i++){
+
+            var hour_option = document.createElement("option");
+            if(i<10){
+                var hour_option_content = document.createTextNode("0" + i); 
+            }else{
+                var hour_option_content = document.createTextNode(i);
+            }
+            
+            hour_option.appendChild(hour_option_content);
+            hour_dropdown.appendChild(hour_option);
+        }
+
+        for (let i = 0; i < 59; i++){
+
+            var ms_option = document.createElement("option");
+            if(i<10){
+                var ms_option_content = document.createTextNode("0" + i); 
+            }else{
+                var ms_option_content = document.createTextNode(i);
+            }
+            ms_option.appendChild(ms_option_content);
+            minute_dropdown.appendChild(ms_option);
+        }
+
+        for (let i = 0; i < 59; i++){
+
+            var ms_option = document.createElement("option");
+            if(i<10){
+                var ms_option_content = document.createTextNode("0" + i); 
+            }else{
+                var ms_option_content = document.createTextNode(i);
+            }
+            ms_option.appendChild(ms_option_content);
+            second_dropdown.appendChild(ms_option);
+        }
+
+}
+
 function stopwatch(){
     intr = setInterval(() => {
         mili_second +=1;
@@ -38,12 +82,13 @@ function stopwatch(){
 
 timer_lable.addEventListener('click', e =>{
 
-    console.log("Timer Lable Clicked");
-    countdown_time.style.display="block";
 
+    countdown_time.style.display="block";
     document.querySelector('.close-img').addEventListener('click', e => {
         countdown_time.style.display="none";
     });
+
+    dropDown();
 
 });
 
