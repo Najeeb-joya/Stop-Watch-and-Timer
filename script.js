@@ -23,35 +23,30 @@ var dropDown = () => {
             }else{
                 var hour_option_content = document.createTextNode(i);
             }
-            
             hour_option.appendChild(hour_option_content);
             hour_dropdown.appendChild(hour_option);
         }
-
+        let counter =0;
         for (let i = 0; i < 59; i++){
-
-            var ms_option = document.createElement("option");
+           
+            var m_option = document.createElement("option");
+            var s_option = document.createElement("option");
             if(i<10){
-                var ms_option_content = document.createTextNode("0" + i); 
+                var m_option_content = document.createTextNode("0" + i); 
+                var s_option_content = document.createTextNode("0" + counter); 
+
             }else{
-                var ms_option_content = document.createTextNode(i);
+                var m_option_content = document.createTextNode(i);
+                var s_option_content = document.createTextNode(counter); 
             }
-            ms_option.appendChild(ms_option_content);
-            minute_dropdown.appendChild(ms_option);
+            m_option.appendChild(m_option_content);
+            s_option.appendChild(s_option_content);
+
+            minute_dropdown.appendChild(m_option);
+            second_dropdown.appendChild(s_option);
+
+            counter++;
         }
-
-        for (let i = 0; i < 59; i++){
-
-            var ms_option = document.createElement("option");
-            if(i<10){
-                var ms_option_content = document.createTextNode("0" + i); 
-            }else{
-                var ms_option_content = document.createTextNode(i);
-            }
-            ms_option.appendChild(ms_option_content);
-            second_dropdown.appendChild(ms_option);
-        }
-
 }
 
 function stopwatch(){
