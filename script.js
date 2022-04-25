@@ -53,11 +53,10 @@ var dropDown = () => {
 }
 
 const countDonw = () => {
-    let hour_option = document.querySelector('.hour-option');
-    let minute_option = document.querySelector('.minute-option');
-    let second_option = document.querySelector('.second-option');
-    
-    
+    hour = hour_dropdown.options[hour_dropdown.selectedIndex].text;
+    minute = minute_dropdown.options[minute_dropdown.selectedIndex].text; 
+    second = second_dropdown.options[second_dropdown.selectedIndex].text;
+    console.log(hour, minute, second);
 }
 function stopwatch(){
     intr = setInterval(() => {
@@ -97,7 +96,7 @@ timer_lable.addEventListener('click', e =>{
     let countDown_time_set = document.querySelector('.countdown-set-btn');
     countDown_time_set.addEventListener('click', e => {
         countDonw();
-    }, {once:true});
+    },{once:true});
 
 });
 
