@@ -49,6 +49,9 @@ var dropDown = () => {
         }
 }
 
+const countDonw = () => {
+    console.log("coundDown Function Called!");
+}
 function stopwatch(){
     intr = setInterval(() => {
         mili_second +=1;
@@ -75,6 +78,7 @@ function stopwatch(){
 }
 
 
+
 timer_lable.addEventListener('click', e =>{
 
 
@@ -82,10 +86,14 @@ timer_lable.addEventListener('click', e =>{
     document.querySelector('.close-img').addEventListener('click', e => {
         countdown_time.style.display="none";
     });
-
-    dropDown();
+    dropDown(); // call dropDown function to add hours, minutes and seconds values with JavaScript.
+    let countDown_time_set = document.querySelector('.countdown-set-btn');
+    countDown_time_set.addEventListener('click', e => {
+        countDonw();
+    }, {once:true});
 
 });
+
 
 btn_start.addEventListener('click', e =>{
     Number.prototype.pad = function(digits){
