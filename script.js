@@ -12,6 +12,14 @@ let minute_dropdown = document.querySelector('.minute-dropdown');
 let second_dropdown = document.querySelector('.second-dropdown');
 let hour=0, minute =0, second = 0, mili_second =0;
 var intr; 
+var  flag = 0; 
+
+Number.prototype.pad = function(digits){
+    for(var n = this.toString(); n.length < digits; n = 0+n);
+    return n;
+}
+
+
 
 var dropDown = () => {
 
@@ -53,13 +61,33 @@ var dropDown = () => {
 }
 
 const countDonw = () => {
-    hour = hour_dropdown.options[hour_dropdown.selectedIndex].text;
-    minute = minute_dropdown.options[minute_dropdown.selectedIndex].text; 
-    second = second_dropdown.options[second_dropdown.selectedIndex].text;
-    console.log(hour, minute, second);
+    mili_second = 100;
+    intr = setInterval(() => {
+        mili_second--;
+        if(mili_second == 1){
+            mili_second =100;
+            second--;
+        }
+        if(second==1){
+            mili_second = 100;
+            second=60; 
+            minute--;
+        }
+        if(minute==0 && second ==1){
+            mili_second=100;
+            second=60; 
+            minute=60; 
+            hour--; 
+        }
+        
+    },10);
+
 }
 function stopwatch(){
+
     intr = setInterval(() => {
+
+      
         mili_second +=1;
         if(mili_second == 99){
             mili_second =0;
@@ -94,40 +122,54 @@ timer_lable.addEventListener('click', e =>{
     });
     dropDown(); // call dropDown function to add hours, minutes and seconds values with JavaScript.
     let countDown_time_set = document.querySelector('.countdown-set-btn');
+
     countDown_time_set.addEventListener('click', e => {
-        countDonw();
+        hour = hour_dropdown.options[hour_dropdown.selectedIndex].text;
+        minute = minute_dropdown.options[minute_dropdown.selectedIndex].text; 
+        second = second_dropdown.options[second_dropdown.selectedIndex].text;
+        dis_hour.textContent = hour; 
+        dis_minute.textContent = minute;
+        dis_second.textContent = second; 
+        dis_miliseconds.textContent = 100;
+        countdown_time.style.display="none";
+        flag = 1; 
+
     },{once:true});
 
 });
 
 
 btn_start.addEventListener('click', e =>{
-    Number.prototype.pad = function(digits){
-        for(var n = this.toString(); n.length < digits; n = 0+n);
-        return n;
-    }
+   
 
-    btn_rest.style.display="inline-block";
-    btn_rest.addEventListener('click', () => {
-        clearInterval(intr);
-        hour =0;
-        minute =0;
-        second=0;
-        mili_second =0;
-        dis_hour.textContent= "00"; 
-        dis_minute.textContent = "00";
-        dis_second.textContent = "00";
-        dis_miliseconds.textContent = "00";
-        btn_start.textContent = "Start";
-        btn_rest.style.display="none";
-    });
-    if(btn_start.textContent === "Pause"){
-            clearInterval(intr);
-            btn_start.textContent = "Resume"
-    
-    }else{
-        stopwatch();
-        btn_start.textContent = "Pause";
+    if(flag === 1){
+        console.log("Timer");
+        countDonw();
+    }
+    else{
+        console.log("Not Timer");
+            btn_rest.style.display="inline-block";
+            btn_rest.addEventListener('click', () => {
+                clearInterval(intr);
+                hour =0;
+                minute =0;
+                second=0;
+                mili_second =0;
+                dis_hour.textContent= "00"; 
+                dis_minute.textContent = "00";
+                dis_second.textContent = "00";
+                dis_miliseconds.textContent = "00";
+                btn_start.textContent = "Start";
+                btn_rest.style.display="none";
+            });
+            if(btn_start.textContent === "Pause"){
+                    clearInterval(intr);
+                    btn_start.textContent = "Resume"
+            
+            }else{
+                stopwatch();
+                btn_start.textContent = "Pause";
+            }
     }
     
 });
