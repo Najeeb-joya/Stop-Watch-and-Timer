@@ -61,6 +61,7 @@ var dropDown = () => {
 }
 
 const countDonw = () => {
+    console.log("CountDown Called");
     mili_second = 100;
     intr = setInterval(() => {
         mili_second--;
@@ -79,7 +80,14 @@ const countDonw = () => {
             minute=60; 
             hour--; 
         }
-        
+
+       dis_hour.textContent = hour <10? "0"+hour :hour; 
+    dis_minute.textContent = minute < 10 ? "0" + minute: minute; 
+       dis_minute.textContent = minute;
+        dis_second.textContent = second < 10 ? "0" + second: second;
+        dis_miliseconds.textContent = mili_second < 10 ? "0" + mili_second:mili_second;
+
+
     },10);
 
 }
