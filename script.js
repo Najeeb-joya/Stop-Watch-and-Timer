@@ -7,17 +7,18 @@ let dis_miliseconds = document.querySelector('.miliseconds');
 let btn_start = document.querySelector('.start');
 let btn_rest = document.querySelector('.reset');
 let countdown_time = document.querySelector('.countdown-timer');
+let hour_dropdown = document.querySelector('.hour-dropdown');
+let minute_dropdown = document.querySelector('.minute-dropdown');
+let second_dropdown = document.querySelector('.second-dropdown');
 let hour=0, minute =0, second = 0, mili_second =0;
 var intr; 
 
 var dropDown = () => {
-    console.log("Drop Dwon Called!");
-    let hour_dropdown = document.querySelector('.hour-dropdown');
-    let minute_dropdown = document.querySelector('.minute-dropdown');
-    let second_dropdown = document.querySelector('.second-dropdown');
+
         for (let i = 0; i < 100; i++){
 
             var hour_option = document.createElement("option");
+            hour_option.setAttribute('class','hour-option');
             if(i<10){
                 var hour_option_content = document.createTextNode("0" + i); 
             }else{
@@ -30,7 +31,9 @@ var dropDown = () => {
         for (let i = 0; i < 59; i++){
            
             var m_option = document.createElement("option");
+            m_option.setAttribute('class','minute-option');
             var s_option = document.createElement("option");
+            s_option.setAttribute('class','second-option');
             if(i<10){
                 var m_option_content = document.createTextNode("0" + i); 
                 var s_option_content = document.createTextNode("0" + counter); 
@@ -50,7 +53,11 @@ var dropDown = () => {
 }
 
 const countDonw = () => {
-    console.log("coundDown Function Called!");
+    let hour_option = document.querySelector('.hour-option');
+    let minute_option = document.querySelector('.minute-option');
+    let second_option = document.querySelector('.second-option');
+    
+    
 }
 function stopwatch(){
     intr = setInterval(() => {
