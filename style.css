@@ -70,11 +70,11 @@ span.timer, span.stop-watch{
 
 .start{
     
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: -20px;
 }
 .reset{
-    margin-left: 10px;
+    margin-left: 15px;
     display: none;
 }
 
