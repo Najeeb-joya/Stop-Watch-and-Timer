@@ -66,7 +66,7 @@ const time_formate = () =>{
     dis_miliseconds.textContent = mili_second < 10 ? "0" + mili_second:mili_second;
 }
 
-
+// Start, Puase and Reset button visibility and functionality function
 const btn_visibility= (called) =>{
 
     btn_rest.style.display="inline-block";
@@ -170,6 +170,7 @@ timer_lable.addEventListener('click', e =>{
         time_formate(); // set hour, minute and seconds values when user select from dropdown to dis_hour, dis_minute and dis_seconds
         dis_miliseconds.textContent = 100;
         countdown_time.style.display="none";
+        timer_lable.style.backgroundColor="black";
         flag = 1; 
 
     },{once:true});
@@ -181,6 +182,7 @@ btn_start.addEventListener('click', e =>{
     if(flag === 1){
         console.log("countdown Timer");
         btn_visibility("countdown"); // call btn_visibility function 
+        //timer_lable.style.backgroundColor="black";
     }
     else{
         console.log("StopWatch");
