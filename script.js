@@ -58,6 +58,7 @@ var dropDown = () => {
         }
 }
 
+// time_formate set and format value for hour, minute and second
 const time_formate = () =>{
     dis_hour.textContent = hour <10? "0"+hour :hour; 
     dis_minute.textContent = minute < 10 ? "0" + minute: minute; 
@@ -65,6 +66,7 @@ const time_formate = () =>{
     dis_miliseconds.textContent = mili_second < 10 ? "0" + mili_second:mili_second;
 }
 
+// Countdown Function
 const countDonw = () => {
     console.log("CountDown Called");
     mili_second = 100;
@@ -87,16 +89,13 @@ const countDonw = () => {
         }
 
         time_formate(); // call time_format function which formate and display the time in stopwatch and countdown 
-
-
     },10);
 
 }
+
+// Stopwatch Function
 function stopwatch(){
-
     intr = setInterval(() => {
-
-      
         mili_second +=1;
         if(mili_second == 99){
             mili_second =0;
@@ -114,8 +113,6 @@ function stopwatch(){
             hour++; 
         }
       time_formate(); // call time_format function which formate and display the time in stopwatch and countdown 
-
-
     },10);
 }
 
@@ -129,6 +126,7 @@ timer_lable.addEventListener('click', e =>{
         countdown_time.style.display="none";
     });
     dropDown(); // call dropDown function to add hours, minutes and seconds values with JavaScript.
+
     let countDown_time_set = document.querySelector('.countdown-set-btn');
 
     countDown_time_set.addEventListener('click', e => {
@@ -136,9 +134,7 @@ timer_lable.addEventListener('click', e =>{
         minute = parseInt(minute_dropdown.options[minute_dropdown.selectedIndex].text); 
         second = parseInt(second_dropdown.options[second_dropdown.selectedIndex].text);
 
-        dis_hour.textContent = hour <10? "0"+hour :hour; 
-        dis_minute.textContent = hour <10? "0"+hour :hour; 
-        dis_minute.textContent = second < 10 ? "0" + second: second;
+        time_formate(); // set hour, minute and seconds values when user select from dropdown to dis_hour, dis_minute and dis_seconds
         dis_miliseconds.textContent = 100;
         countdown_time.style.display="none";
         flag = 1; 
@@ -149,8 +145,6 @@ timer_lable.addEventListener('click', e =>{
 
 
 btn_start.addEventListener('click', e =>{
-   
-
     if(flag === 1){
         console.log("Timer");
         countDonw();
