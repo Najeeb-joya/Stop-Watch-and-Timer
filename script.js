@@ -104,23 +104,31 @@ const countDonw = () => {
     console.log("CountDown Called");
     mili_second = 100;
     intr = setInterval(() => {
-        mili_second--;
-        if(mili_second == 1){
-            mili_second =100;
-            second--;
-        }
-        if(second==1){
-            mili_second = 100;
-            second=60; 
-            minute--;
-        }
-        if(minute==0 && second ==1){
-            mili_second=100;
-            second=60; 
-            minute=60; 
-            hour--; 
-        }
+        
+       
+            mili_second--;
+            if(second > 0 && mili_second == 1){
+                mili_second =100;
+                second--;
+            }
+            if(hour > 0 && minute > 0 && second==1){
+                mili_second = 100;
+                second=60; 
+                minute--;
+            }
+            if(hour > 0 && minute==0 && second ==1){
+                mili_second=100;
+                second=60; 
+                minute=60; 
+                hour--; 
+            }
 
+            if(hour === 0 && minute === 0 && second ===0 && mili_second ==0){
+                console.log("Interval Cleared");
+                clearInterval(intr);
+            }
+            
+    
         time_formate(); // call time_format function which formate and display the time in stopwatch and countdown 
     },10);
 
@@ -182,7 +190,7 @@ btn_start.addEventListener('click', e =>{
     if(flag === 1){
         console.log("countdown Timer");
         btn_visibility("countdown"); // call btn_visibility function 
-        //timer_lable.style.backgroundColor="black";
+       
     }
     else{
         console.log("StopWatch");
