@@ -10,6 +10,12 @@ body{
 button{
     background-color: rgb(219, 135, 10);
     color: white;
+    width: 90px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
 }
 div.container{
     width: 80%;
@@ -45,11 +51,14 @@ span.timer, span.stop-watch{
     margin-top: 60px;
     font-size: 70px;
     font-weight: 800;
+    border: 1px solid red;
 }
 
 .hour, .minute, .second{
-    margin-left: -15px;
+    margin-left: 0;
 }
+
+
 .miliseconds{
     margin-left: -10px;
     font-size: 25px;
@@ -57,13 +66,8 @@ span.timer, span.stop-watch{
 }
 
 .start{
-    padding: 10px;
+    
     margin-top: 10px;
-    font-size: 17px;
-    font-weight: 600;
-    border-radius: 8px;
-    width: 90px;
-    cursor: pointer;
     margin-left: -20px;
 }
 .reset{
@@ -85,6 +89,7 @@ span.timer, span.stop-watch{
     right: 0;
     display: none;
 }
+
 .close{
     text-align: right;
     margin-right: 10px;
@@ -94,6 +99,12 @@ span.timer, span.stop-watch{
 .close img{
     cursor: pointer;
 }
+.countdown-set-btn{
+    display: block;
+    margin: 50px auto;
+    background-color: #207398;
+}
+
 .cdtimer{
     width: 90%;
     margin: 100px auto;
