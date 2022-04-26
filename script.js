@@ -66,6 +66,39 @@ const time_formate = () =>{
     dis_miliseconds.textContent = mili_second < 10 ? "0" + mili_second:mili_second;
 }
 
+
+const btn_visibility= (called) =>{
+
+    btn_rest.style.display="inline-block";
+    btn_rest.addEventListener('click', () => {
+        clearInterval(intr);
+        hour =0;
+        minute =0;
+        second=0;
+        mili_second =0;
+        dis_hour.textContent= "00"; 
+        dis_minute.textContent = "00";
+        dis_second.textContent = "00";
+        dis_miliseconds.textContent = "00";
+        btn_start.textContent = "Start";
+        btn_rest.style.display="none";
+    });
+    if(btn_start.textContent === "Pause"){
+            clearInterval(intr);
+            btn_start.textContent = "Resume"
+    
+    }else{
+        //stopwatch();
+        if(called === "stopwatch"){
+            stopwatch();
+        }else{
+            countDonw();
+        }
+        btn_start.textContent = "Pause";
+    }
+
+}
+
 // Countdown Function
 const countDonw = () => {
     console.log("CountDown Called");
@@ -146,33 +179,12 @@ timer_lable.addEventListener('click', e =>{
 
 btn_start.addEventListener('click', e =>{
     if(flag === 1){
-        console.log("Timer");
-        countDonw();
+        console.log("countdown Timer");
+        btn_visibility("countdown"); // call btn_visibility function 
     }
     else{
-        console.log("Not Timer");
-            btn_rest.style.display="inline-block";
-            btn_rest.addEventListener('click', () => {
-                clearInterval(intr);
-                hour =0;
-                minute =0;
-                second=0;
-                mili_second =0;
-                dis_hour.textContent= "00"; 
-                dis_minute.textContent = "00";
-                dis_second.textContent = "00";
-                dis_miliseconds.textContent = "00";
-                btn_start.textContent = "Start";
-                btn_rest.style.display="none";
-            });
-            if(btn_start.textContent === "Pause"){
-                    clearInterval(intr);
-                    btn_start.textContent = "Resume"
-            
-            }else{
-                stopwatch();
-                btn_start.textContent = "Pause";
-            }
+        console.log("StopWatch");
+        btn_visibility("stopwatch"); // call btn_visibility function 
     }
     
 });
