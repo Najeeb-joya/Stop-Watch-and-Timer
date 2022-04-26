@@ -109,25 +109,26 @@ const countDonw = () => {
         
        
             mili_second--;
-            if(second > 0 && mili_second == 1){
+            if(mili_second == 1){
                 mili_second =100;
                 second--;
             }
-            if(hour > 0 && minute > 0 && second==1){
+            if(second==1){
                 mili_second = 100;
                 second=60; 
                 minute--;
             }
-            if(hour > 0 && minute==0 && second ==1){
+            if(hour > 0 && minute==0){
                 mili_second=100;
                 second=60; 
                 minute=60; 
                 hour--; 
             }
 
-            if(hour === 0 && minute === 0 && second ===0 && mili_second ==0){
+            if(hour === 0 && minute === 0 && second === 0 ){
                 console.log("Interval Cleared");
                 clearInterval(intr);
+                dis_miliseconds =0;
             }
             
     
