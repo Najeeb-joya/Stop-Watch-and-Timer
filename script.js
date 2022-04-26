@@ -82,8 +82,8 @@ const countDonw = () => {
         }
 
        dis_hour.textContent = hour <10? "0"+hour :hour; 
-    dis_minute.textContent = minute < 10 ? "0" + minute: minute; 
-       dis_minute.textContent = minute;
+        dis_minute.textContent = minute < 10 ? "0" + minute: minute; 
+    
         dis_second.textContent = second < 10 ? "0" + second: second;
         dis_miliseconds.textContent = mili_second < 10 ? "0" + mili_second:mili_second;
 
@@ -132,13 +132,21 @@ timer_lable.addEventListener('click', e =>{
     let countDown_time_set = document.querySelector('.countdown-set-btn');
 
     countDown_time_set.addEventListener('click', e => {
-        hour = hour_dropdown.options[hour_dropdown.selectedIndex].text;
-        minute = minute_dropdown.options[minute_dropdown.selectedIndex].text; 
-        second = second_dropdown.options[second_dropdown.selectedIndex].text;
-        dis_hour.textContent = hour; 
-        dis_minute.textContent = minute;
-        dis_second.textContent = second; 
+        hour = parseInt(hour_dropdown.options[hour_dropdown.selectedIndex].text);
+        minute = parseInt(minute_dropdown.options[minute_dropdown.selectedIndex].text); 
+        second = parseInt(second_dropdown.options[second_dropdown.selectedIndex].text);
+
+        dis_hour.textContent = hour <10? "0"+hour :hour; 
+        dis_minute.textContent = hour <10? "0"+hour :hour; 
+        dis_minute.textContent = second < 10 ? "0" + second: second;
         dis_miliseconds.textContent = 100;
+
+
+
+        // dis_hour.textContent = hour; 
+        // dis_minute.textContent = minute;
+        // dis_second.textContent = second; 
+        // dis_miliseconds.textContent = 100;
         countdown_time.style.display="none";
         flag = 1; 
 
