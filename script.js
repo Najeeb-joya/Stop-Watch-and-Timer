@@ -19,8 +19,6 @@ Number.prototype.pad = function(digits){
     return n;
 }
 
-
-
 var dropDown = () => {
 
         for (let i = 0; i < 100; i++){
@@ -60,6 +58,13 @@ var dropDown = () => {
         }
 }
 
+const time_formate = () =>{
+    dis_hour.textContent = hour <10? "0"+hour :hour; 
+    dis_minute.textContent = minute < 10 ? "0" + minute: minute; 
+    dis_second.textContent = second < 10 ? "0" + second: second;
+    dis_miliseconds.textContent = mili_second < 10 ? "0" + mili_second:mili_second;
+}
+
 const countDonw = () => {
     console.log("CountDown Called");
     mili_second = 100;
@@ -81,11 +86,7 @@ const countDonw = () => {
             hour--; 
         }
 
-       dis_hour.textContent = hour <10? "0"+hour :hour; 
-        dis_minute.textContent = minute < 10 ? "0" + minute: minute; 
-    
-        dis_second.textContent = second < 10 ? "0" + second: second;
-        dis_miliseconds.textContent = mili_second < 10 ? "0" + mili_second:mili_second;
+        time_formate(); // call time_format function which formate and display the time in stopwatch and countdown 
 
 
     },10);
@@ -112,10 +113,9 @@ function stopwatch(){
             minute=0; 
             hour++; 
         }
-        dis_hour.textContent = hour.pad(2); 
-        dis_minute.textContent = minute.pad(2); 
-        dis_second.textContent = second.pad(2);
-        dis_miliseconds.textContent = mili_second.pad(2);
+      time_formate(); // call time_format function which formate and display the time in stopwatch and countdown 
+
+
     },10);
 }
 
@@ -140,13 +140,6 @@ timer_lable.addEventListener('click', e =>{
         dis_minute.textContent = hour <10? "0"+hour :hour; 
         dis_minute.textContent = second < 10 ? "0" + second: second;
         dis_miliseconds.textContent = 100;
-
-
-
-        // dis_hour.textContent = hour; 
-        // dis_minute.textContent = minute;
-        // dis_second.textContent = second; 
-        // dis_miliseconds.textContent = 100;
         countdown_time.style.display="none";
         flag = 1; 
 
