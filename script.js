@@ -82,6 +82,8 @@ const btn_visibility= (called) =>{
         dis_miliseconds.textContent = "00";
         btn_start.textContent = "Start";
         btn_rest.style.display="none";
+        stopwath_lable.style.backgroundColor="rgb(219, 135, 10)";
+        timer_lable.style.backgroundColor="rgb(219, 135, 10)";
     });
     if(btn_start.textContent === "Pause"){
             clearInterval(intr);
@@ -195,6 +197,7 @@ btn_start.addEventListener('click', e =>{
     else{
         console.log("StopWatch");
         btn_visibility("stopwatch"); // call btn_visibility function 
+        stopwath_lable.style.backgroundColor="black";
     }
     
 });
