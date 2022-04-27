@@ -41,8 +41,8 @@ span.timer, span.stop-watch{
     background-color: rgb(219, 135, 10);
     width: 90px;
     cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid black; 
+    border-radius: 8px;
+    border: 2px solid black; 
 }
 .timer-display-sec{
     margin-top: 30px;
@@ -55,6 +55,7 @@ span.timer, span.stop-watch{
 .hour, .minute, .second{
     display: inline-block;
     margin-left: 0;
+    margin-left: -10px;
 }
 
 
