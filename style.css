@@ -26,13 +26,13 @@ div.main-timer{
     width: 60%;
     border: 5px solid white;
     border-radius: 10px;
-    height: 400px;
+    height: 350px;
     margin: 200px auto;
     margin-bottom: 0;
     text-align: center;
 }
 span.timer, span.stop-watch{
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 5px;
     font-size: 17px;
     font-weight: 600;
@@ -41,23 +41,26 @@ span.timer, span.stop-watch{
     background-color: rgb(219, 135, 10);
     width: 90px;
     cursor: pointer;
-    border-radius: 4px; 
+    border-radius: 4px;
+    border: 1px solid black; 
 }
 .stop-watch:hover, .timer:hover{
     background-color: black;
 
 }
 .timer-display-sec{
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 90px;
     font-family: 'Oswald', sans-serif;
     font-weight: 800;
+    height: 150px;
+
 
 }
 
 .hour, .minute, .second{
+    display: inline-block;
     margin-left: 0;
-    margin-top: 10px;
 }
 
 
