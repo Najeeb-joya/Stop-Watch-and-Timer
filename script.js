@@ -185,6 +185,7 @@ timer_lable.addEventListener('click', e =>{
         dis_miliseconds.textContent = 100;
         countdown_time.style.display="none";
         timer_lable.style.backgroundColor="black";
+        stopwath_lable.style.backgroundColor="rgb(219, 135, 10)";
         flag = 1; 
 
     },{once:true});
