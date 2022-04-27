@@ -68,9 +68,11 @@ const time_formate = () =>{
 
 // Start, Puase and Reset button visibility and functionality function
 const btn_visibility= (called) =>{
+   // console.log(stopwath_lable.textContent);
 
     btn_rest.style.display="inline-block";
     btn_rest.addEventListener('click', () => {
+        location.reload();
         clearInterval(intr);
         hour =0;
         minute =0;
