@@ -44,18 +44,12 @@ span.timer, span.stop-watch{
     border-radius: 4px;
     border: 1px solid black; 
 }
-.stop-watch:hover, .timer:hover{
-    background-color: black;
-
-}
 .timer-display-sec{
     margin-top: 30px;
     font-size: 90px;
     font-family: 'Oswald', sans-serif;
     font-weight: 800;
     height: 150px;
-
-
 }
 
 .hour, .minute, .second{
