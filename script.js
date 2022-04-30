@@ -106,15 +106,20 @@ const btn_visibility= (called) =>{
 // Countdown Function
 const countDonw = () => {
     console.log("CountDown Called");
-    mili_second = 100;
+     mili_second = 0;
+    console.log(mili_second);
     intr = setInterval(() => {
-        
-       
-            mili_second--;
+    
+           
+            if(mili_second == 0 && second ==0){
+                mili_second = 100;
+                second=60;
+            }
             if(mili_second == 0){
                 mili_second =100;
                 second--;
             }
+           
             if(minute> 0 && second==0){
                 mili_second = 100;
                 second=60; 
@@ -126,6 +131,7 @@ const countDonw = () => {
                 minute=60; 
                 hour--; 
             }
+
             if(hour === 0 && minute === 0 && second === 0 && mili_second ==1 ){
                 console.log("Interval Cleared");
                 dis_miliseconds.textContent= "00";
@@ -133,6 +139,7 @@ const countDonw = () => {
                 
             
             }
+            mili_second--;
             
     
         time_formate(); // call time_format function which formate and display the time in stopwatch and countdown 
@@ -182,7 +189,7 @@ timer_lable.addEventListener('click', e =>{
         second = parseInt(second_dropdown.options[second_dropdown.selectedIndex].text);
 
         time_formate(); // set hour, minute and seconds values when user select from dropdown to dis_hour, dis_minute and dis_seconds
-        dis_miliseconds.textContent = 100;
+        mili_second=0;
         countdown_time.style.display="none";
         timer_lable.style.backgroundColor="black";
         stopwath_lable.style.backgroundColor="rgb(219, 135, 10)";
