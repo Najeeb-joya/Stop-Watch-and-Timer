@@ -10,9 +10,9 @@ body{
 button{
     background-color: rgb(219, 135, 10);
     color: white;
-    width: 90px;
+    width: 10%;
     padding: 10px;
-    font-size: 17px;
+    font-size: 1em;
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
@@ -39,23 +39,25 @@ span.timer, span.stop-watch{
     display: inline-block;
     padding: 8px;
     background-color: rgb(219, 135, 10);
-    width: 90px;
+    width: 15%;
     cursor: pointer;
     border-radius: 8px;
     border: 2px solid black; 
 }
 .timer-display-sec{
     margin-top: 30px;
-    font-size: 90px;
+    font-size: 6rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 800;
     height: 150px;
+    
 }
 
 .hour, .minute, .second{
     display: inline-block;
     margin-left: 0;
     margin-left: -10px;
+    width: 15%;
 }
 
 
