@@ -136,6 +136,11 @@ const countDonw = () => {
                 console.log("Interval Cleared");
                 dis_miliseconds.textContent= "00";
                 clearInterval(intr);
+                btn_rest.style.display="none";
+                btn_start.textContent = "Start"
+                timer_lable.style.backgroundColor="rgb(219, 135, 10)";
+                window.location.reload();
+
                 
             
             }
