@@ -11,8 +11,8 @@ button{
     background-color: rgb(219, 135, 10);
     color: white;
     width: 15%;
-    padding: 10px;
-    font-size: 1em;
+    padding: 0.5rem;
+    font-size: 1.3em;
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
@@ -24,47 +24,47 @@ div.container{
 }
 div.main-timer{
     width: 60%;
-    border: 5px solid white;
-    border-radius: 10px;
-    height: 350px;
-    margin: 200px auto;
+    border: 0.3rem solid white;
+    border-radius: 0.6rem;
+    height: 25rem;
+    margin: 10rem auto;
     margin-bottom: 0;
     text-align: center;
 }
 span.timer, span.stop-watch{
-    margin-top: 30px;
-    margin-left: 5px;
-    font-size: 17px;
+    margin-top: 1.9em;
+    margin-left: 0.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     display: inline-block;
-    padding: 8px;
+    padding: 0.5rem;
     background-color: rgb(219, 135, 10);
     width: 15%;
     cursor: pointer;
-    border-radius: 8px;
-    border: 2px solid black; 
+    border-radius: 0.5rem;
+    border: 0.1rem solid black; 
 }
 .timer-display-sec{
-    margin-top: 30px;
+    margin-top: 2rem;
     font-size: 6rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 800;
-    height: 150px;
+    margin-left: 3rem;
+    height: 20vh;
     
 }
 
 .hour, .minute, .second{
     display: inline-block;
     margin-left: 0;
-    margin-left: -10px;
-    width: 15%;
+   
 }
 
 
 .miliseconds{
     display: inline-block;
-    margin-left: -10px;
-    font-size: 30px;
+    margin-left: -1rem;
+    font-size: 2rem;
     font-weight: 400;
     background-color: #4a788a;
     border-radius: 4px;
@@ -73,19 +73,19 @@ span.timer, span.stop-watch{
 
 .start{
     
-    margin-top: 15px;
-    margin-left: -20px;
+    margin-top: 1rem;
+    margin-left: -1.2rem;
 }
 .reset{
-    margin-left: 15px;
+    margin-left: 1rem;
     display: none;
 }
 
 .countdown-timer{
     width: 60%;
     background-color: white;
-    margin: 10px auto;
-    height: 300px;
+    margin: 0.7rem auto;
+    height: 18rem;
     text-align: center;
     color: black;
     border-radius: 6px;
@@ -98,8 +98,8 @@ span.timer, span.stop-watch{
 
 .close{
     text-align: right;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: 0.7rem;
+    margin-top: 0.7rem;
     
 }
 .close img{
@@ -107,25 +107,25 @@ span.timer, span.stop-watch{
 }
 .countdown-set-btn{
     display: block;
-    margin: 50px auto;
+    margin: 3.3rem auto;
     background-color: #207398;
 }
 
 .cdtimer{
     width: 90%;
-    margin: 100px auto;
+    margin: 6.3rem auto;
     display: inline-block;
-    font-size: 23px;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 .cdtimer section{
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 1rem;
     
 }
 .cdtimer select {
-    font-size: 23px;
-    margin-left: 5px;
-    width: 80px;
-    border-radius: 6px;
+    font-size: 1.4rem;
+    margin-left: 0.3rem;
+    width: 5.7rem;
+    border-radius: 0.4rem;
 }
