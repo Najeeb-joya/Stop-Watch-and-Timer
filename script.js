@@ -1,5 +1,5 @@
-let timer_lable = document.querySelector('.timer');
-let stopwath_lable = document.querySelector('.stop-watch');
+const timer_lable = document.querySelector('.timer');
+const stopwath_lable = document.querySelector('.stop-watch');
 let dis_hour = document.querySelector('.hour');
 let dis_minute = document.querySelector('.minute');
 let dis_second = document.querySelector('.second');
