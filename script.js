@@ -14,10 +14,6 @@ let hour=0, minute =0, second = 0, mili_second =0;
 var intr; 
 var  flag = 0; 
 
-Number.prototype.pad = function(digits){
-    for(var n = this.toString(); n.length < digits; n = 0+n);
-    return n;
-}
 
 var dropDown = () => {
 
