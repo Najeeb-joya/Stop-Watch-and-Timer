@@ -20,13 +20,14 @@ button{
 div.container{
     width: 80%;
     margin: 0 auto;
-    
 }
 div.main-timer{
     width: 60%;
+    min-width: 17rem;
     border: 0.3rem solid white;
     border-radius: 0.6rem;
     height: 25rem;
+    max-height: 60rem;
     margin: 10rem auto;
     margin-bottom: 0;
     text-align: center;
@@ -75,6 +76,7 @@ span.timer, span.stop-watch{
     
     margin-top: 1rem;
     margin-left: -1.2rem;
+  
 }
 .reset{
     margin-left: 1rem;
